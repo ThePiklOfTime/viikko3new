@@ -12,5 +12,10 @@ public class Safe {
     public void changePin(String NewPin) {
         this.pinCode = NewPin;
     }
-    
+    public void addItem(String item) {
+            safeFolder.add(item);
+        
+        
+    }
+
 }
