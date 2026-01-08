@@ -1,5 +1,6 @@
 package viikko3;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App 
@@ -8,7 +9,7 @@ public class App
     {
         Boolean exit = false;
         Scanner scanner = new Scanner(System.in);
-
+        Safe safe = new Safe("0000");
 
 
         while (!exit) {
@@ -20,7 +21,24 @@ public class App
             
             switch (i) {
                 case 1:
+                    System.out.println("Anna uusi PIN-koodi:");
+                    String newPin = scanner.nextLine();
+                    safe.changePin(newPin);
+                    break;
+                case 2:
+                    System.out.println("Anna kansioon lisättävä tieto:");
+                    String item = scanner.nextLine();
+                    safe.addItem(item);
+                    break;
+                case 3:
+                    System.out.println("Kansion tiedot:");
+                    System.out.println("Anna PIN-koodi:");
+                    String pin = scanner.nextLine();
+                    ArrayList<String> safeItems = safe.listItems(pin);
 
+                    for (String safeItem : safeItems) {
+                        System.out.println(safeItem);
+                    }
                     break;
                 case 0:
                     exit = true;
