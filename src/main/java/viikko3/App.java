@@ -12,7 +12,7 @@ public class App
 
 
         while (!exit) {
-            System.out.println("1) Aseta PIN-koodi \n2) Lisää tietoja kansioon \n3) Listaa Tiedot kansiosta, \n0) Lopeta ohjelma");
+            System.out.println("1) Aseta PIN-koodi \n2) Lisää tietoja kansioon \n3) Listaa tiedot kansiosta, \n0) Lopeta ohjelma");
             
             
             if(scanner.hasNext()){
@@ -20,7 +20,7 @@ public class App
             
             switch (i) {
                 case 1:
-                    
+
                     break;
                 case 0:
                     exit = true;
