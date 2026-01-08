@@ -31,7 +31,6 @@ public class App
                     safe.addItem(item);
                     break;
                 case 3:
-                    System.out.println("Kansion tiedot:");
                     System.out.println("Anna PIN-koodi:");
                     String pin = scanner.nextLine();
                     ArrayList<String> safeItems = safe.listItems(pin);
